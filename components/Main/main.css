@@ -1,0 +1,161 @@
+/*===== Buttons C F =====*/
+
+.btn-CF {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-bottom: 70px;
+}
+
+.btn-C {
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #6e707a;
+    color: #e7e7eb;
+    border: none;
+    margin: 10px 5px;
+}
+
+.btn-F {
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #6e707a;
+    color: #e7e7eb;
+    border: none;
+    margin: 10px 5px;
+}
+
+/*===== 5 BOX WEEKS =====*/
+
+.container-week {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box-week {
+    background-color: #1e213a;
+    color: #e7e7eb;
+    width: 120px;
+    height: 180px;
+    font: 500 16px raleway;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*===== TEXT TODAY =====*/
+
+.today-h1 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #e7e7eb;
+    padding-top: 70px;
+
+}
+
+/*===== STATUS DAY =====*/
+
+.status-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.status-1, .status-2 {
+    width: 300px;
+    height: 200px;
+    background: #1e213a;
+    color: #e7e7eb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    margin: 15px 0 20px 0;
+}
+
+.status-3, .status-4 {
+    width: 300px;
+    height: 150px;
+    background: #1e213a;
+    color: #e7e7eb;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.txt {
+    font-size: 16px;
+    margin: 20px 0 0 0;
+}
+
+.status-box span {
+    font-size: 36px;
+    margin: 0;
+}
+
+#result {
+    font-size: 64px;
+    margin: 0;
+}
+
+.humidity-bar-container {
+    width: 230px;
+    height: 8px;
+    background-color: #e7e7eb;
+    border-radius: 80px;
+}
+
+.humidity-bar {
+    width: 100%;
+    background-color: #ffec65;
+    border-radius: 80px;
+    height: 8px;
+}
+
+#compass {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#compass>p {
+    margin: 0;
+    padding-left: 20px;
+}
+
+#bar100-1 {
+    width: 230px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bar100-2 {
+    width: 230px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/*===== FOOTER =====*/
+
+.dev {
+    display: flex;
+    justify-content: center;
+    color: #A09FB1;
+    padding-top: 112px;
+}
+
+.footer-name {
+  font-weight: bold;
+  text-decoration: underline;
+  padding: 0 10px;
+}

@@ -1,0 +1,47 @@
+/*===== SIDE BAR LEFT =====*/
+
+#img-side {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 109px 0 87px 0;
+}
+
+.sidebar-box h1 {
+    font-size: 140px;
+    color: #E7E7EB;
+    text-align: center;
+}
+
+.temperature {
+    padding-bottom: 87px;
+}
+
+.Cels {
+    font-size: 48px;
+    color: #A09FB1;
+}
+
+.weather {
+    font-size: 36px;
+    text-align: center;
+    color: #A09FB1;
+    padding-bottom: 87px;
+}
+
+.date {
+    font-size: 18px;
+    color: #88869D;
+    text-align: center;
+    padding-bottom: 32px;
+}
+
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #88869D;
+    text-align: center;
+    padding-bottom:52px;
+}

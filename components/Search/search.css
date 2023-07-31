@@ -1,0 +1,23 @@
+.searchbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 42px;
+}
+
+#btnSearch {
+    background-color: #6e707a;
+    color: #e7e7eb;
+    border: none;
+}
+
+.btn-L {
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding-top: 5px;
+    background-color: #6e707a;
+    color: #e7e7eb;
+    border: none;
+}
