@@ -1,6 +1,8 @@
 import React from "react";
 import sidebar from "../../components/Sidebar/sidebar.css";
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 function getWeatherImage(weather) {
   switch (weather) {
@@ -54,8 +56,8 @@ function Sidebar({ data }) {
       <div className="weather">{weather}</div>
       <div className="date">Today - {dateString}</div>
       <div className="location">
-        <span className="material-symbols-outlined">location_on</span>
-        {data.name}
+      <FontAwesomeIcon icon={faLocationDot} />
+      {data.name}
       </div>
     </div>
   );

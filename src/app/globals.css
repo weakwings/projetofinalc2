@@ -12,6 +12,9 @@
 }
 
 #container_1 {
+    background-image: url('/Cloud-background.png');
+    background-repeat: no-repeat;
+    background-position: 55% 20%;
     background-color: #1e213a;
     display: flex;
     justify-content: space-evenly;
@@ -26,26 +29,78 @@
     padding: 40px 170px;
 }
 
-@media screen and (min-width: 1024px) {
-    
-}
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    
-}
+/*===== MEDIA SCREEN =====*/
 
-@media  screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     #content {
         display: flex;
         flex-direction: column;
-        
+
     }
 
     #container_1 {
         width: 100%;
+        padding: 20px 10%;
+
     }
 
     #container_2 {
         width: 100%;
+        padding: 40px 10%;
+
+    }
+
+    #week-container {
+        gap: 32px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #box-status {
+        justify-content: center;
+    }
+
+    #devtag {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    #content {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #container_1 {
+        width: 100%;
+        padding: 20px 10%;
+
+    }
+
+    #container_2 {
+        width: 100%;
+        padding: 40px 10%;
+
+    }
+
+    #week-container {
+        gap: 32px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #box-status {
+        justify-content: center;
+        gap: 32px;
+    }
+
+    #devtag {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }

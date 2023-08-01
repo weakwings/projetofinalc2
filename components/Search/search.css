@@ -21,3 +21,51 @@
     color: #e7e7eb;
     border: none;
 }
+
+.fa-location-crosshairs {
+    width: 24px;
+    height: 24px;
+}
+
+/*===== BOX SIDE SEARCH =====*/
+
+.offcanvas-header {
+    color: #e7e7eb;
+    background-color: #1E213A;
+}
+
+.offcanvas-body {
+    background-color: #1E213A;
+}
+
+.offcanvas-body p {
+    display: flex;
+    align-items: center;
+    width: 351px;
+    height: 64px;
+    border: 1px solid #616475;
+    color: #E7E7EB;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.box-search {
+    background-color: #1E213A;
+    color: #e7e7eb;
+    border: 1px solid #E7E7EB;
+    height: 48px;
+    margin-right: 10px;
+}
+
+.btn-search {
+    background: #3C47E9;
+    border: none;
+    color: #E7E7EB;
+    font-size: 16px;
+    width: 86px;
+    height: 48px;
+}
+
+.btn-close {
+    color: #E7E7EB;
+}

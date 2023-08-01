@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../Main/main.css";
 import Day from "../../components/Day/Day";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
 
 async function fetchWeatherData() {
   const response = await fetch(
@@ -33,7 +35,7 @@ function Main() {
         <button className="btn-C"> ºF</button>
         <button className="btn-F"> ºC</button>
       </div>
-      <div className="container-week">
+      <div id="week-container" className="container-week">
         {weatherData &&
           weatherData.list
             .filter((item, index) => index % 8 === 0)
@@ -47,7 +49,7 @@ function Main() {
       <div>
         <h1 className="today-h1">Todays Hightlights</h1>
       </div>
-      <div className="status-box">
+      <div id="box-status" className="status-box">
         {weatherData && (
           <>
             <div className="status-1">
@@ -57,12 +59,7 @@ function Main() {
                 <span>mph</span>
               </p>
               <div id="compass">
-                <span
-                  className="material-symbols-outlined"
-                  style={compassStyle}
-                >
-                  assistant_navigation
-                </span>
+                <div className="circle"><FontAwesomeIcon style={compassStyle} icon={faLocationArrow} /></div>
                 <p>WSW</p>
               </div>
             </div>
@@ -99,7 +96,7 @@ function Main() {
           </>
         )}
       </div>
-      <footer className="dev">
+      <footer id="devtag" className="dev">
         created by <span className="footer-name"> Felipe Messias</span> -
         devChallenges.io
       </footer>

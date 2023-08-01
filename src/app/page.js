@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import Main from "../../components/Main/Main";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Search from "../../components/Search/Search";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 async function fetchSidebarData() {
   const response = await fetch(
