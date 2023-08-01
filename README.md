@@ -39,7 +39,6 @@
 
 ![screenshot](https://github.com/weakwings/projetofinalc2/blob/main/public/project.png?raw=true)
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
 - Meu Segundo Projeto
 
@@ -93,5 +92,5 @@ $ npm start
 
 ## Contact
 
-- GitHub [@weakwings](https://{github.com/weakwings})
+- GitHub [@weakwings](https://github.com/weakwings)
 
