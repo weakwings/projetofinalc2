@@ -31,6 +31,28 @@
 
 
 /*===== MEDIA SCREEN =====*/
+@media screen and (max-width: 430px) {
+
+    #header-canvas {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #search-sidebar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-search {
+        margin: 20px;
+    }
+
+    .fa-magnifying-glass {
+        display: none;
+    }
+}
+
 
 @media screen and (max-width: 767px) {
     #content {
@@ -65,7 +87,13 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    .offcanvas-header, .offcanvas-body {
+        background-color: #1E213A;
+    }
+
 }
+
 
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {

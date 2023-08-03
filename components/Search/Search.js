@@ -1,66 +1,96 @@
-import React from "react";
+import { useState, useRef } from "react";
 import search from "../../components/Search/search.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationCrosshairs } from "@fortawesome/free-solid-svg-icons";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-function Search() {
+function Search({ onCitySelect, currentCity, errorMessage }) {
+  const [selectedCity, setSelectedCity] = useState(null);
+  const [inputValue, setInputValue] = useState("");
+  const offcanvasRef = useRef();
+
+  const handleCityClick = (city) => {
+    setSelectedCity(city);
+    onCitySelect(city);
+    handleCloseOffcanvas();
+  };
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleSearchClick = () => {
+    if (inputValue.trim() !== "") {
+      onCitySelect(inputValue);
+      handleCloseOffcanvas();
+    }
+  };
+
   const handleLocationClick = () => {
-    const cityPosition = [-23.5489, -46.6388];
-
-    const mapUrl = `https://www.openstreetmap.org/#map=13/${cityPosition[0]}/${cityPosition[1]}`;
+    const mapUrl = `https://www.openstreetmap.org/search?query=${currentCity}`;
 
     window.open(mapUrl, "_blank");
+  };
+
+  const handleCloseOffcanvas = () => {
+    offcanvasRef.current.dispatchEvent(new Event("hidden.bs.offcanvas"));
   };
 
   return (
     <div className="searchbox">
       <button
         id="btnSearch"
-        class="btn btn-primary"
         type="button"
         data-bs-toggle="offcanvas"
-        data-bs-target="#staticBackdrop"
-        aria-controls="staticBackdrop"
+        data-bs-target="#offcanvasWithBothOptions"
+        aria-controls="offcanvasWithBothOptions"
       >
-        Seach Location
+        Seach for places
       </button>
 
       <div
-        class="offcanvas offcanvas-start"
-        data-bs-backdrop="static"
-        tabindex="-1"
-        id="staticBackdrop"
-        aria-labelledby="staticBackdropLabel"
+        ref={offcanvasRef}
+        className="offcanvas offcanvas-start"
+        data-bs-scroll="true"
+        tabIndex="-1"
+        id="offcanvasWithBothOptions"
+        aria-labelledby="offcanvasWithBothOptionsLabel"
       >
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="staticBackdropLabel">
-            <nav>
-              <div class="container-fluid">
-                <form class="d-flex" role="search">
-                  <input
-                    class="box-search"
-                    type="search"
-                    placeholder="  search location"
-                    aria-label="Search"
-                  />
-                  <button class="btn-search" type="submit">
-                    Search
-                  </button>
-                </form>
-              </div>
-            </nav>
-          </h5>
-          <button
+        <div id="header-canvas" className="offcanvas-header">
+          <h5
+            className="offcanvas-title"
+            id="offcanvasWithBothOptionsLabel"
+          ></h5>
+          <p
             type="button"
-            class="btn-close"
+            id="btn-close"
             data-bs-dismiss="offcanvas"
             aria-label="Close"
-          ></button>
+          >
+            <FontAwesomeIcon icon={faXmark} />
+          </p>
         </div>
-        <div class="offcanvas-body">
-          <p>London</p>
-          <p>Barcelona</p>
-          <p>Long Beach</p>
+        <div id="body-canvas" className="offcanvas-body">
+          <div id="search-sidebar">
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+            <input
+              className="box-search"
+              type="search"
+              placeholder="   search location"
+              value={inputValue}
+              onChange={handleInputChange}
+            ></input>
+            <button className="btn-search" onClick={handleSearchClick}>
+              Search
+            </button>
+            {errorMessage && <p id="errormg" className="error-message">{errorMessage}</p>}
+            <div className="cities-box">
+              <p onClick={() => handleCityClick("London")}>London</p>
+              <p onClick={() => handleCityClick("Barcelona")}>Barcelona</p>
+              <p onClick={() => handleCityClick("Long Beach")}>Long Beach</p>
+            </div>
+          </div>
         </div>
       </div>
       <button className="btn-L" onClick={handleLocationClick}>

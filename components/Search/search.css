@@ -9,6 +9,8 @@
     background-color: #6e707a;
     color: #e7e7eb;
     border: none;
+    width: 161px;
+    height: 40px;
 }
 
 .btn-L {
@@ -29,32 +31,56 @@
 
 /*===== BOX SIDE SEARCH =====*/
 
-.offcanvas-header {
-    color: #e7e7eb;
-    background-color: #1E213A;
-}
-
-.offcanvas-body {
-    background-color: #1E213A;
-}
-
-.offcanvas-body p {
-    display: flex;
-    align-items: center;
-    width: 351px;
-    height: 64px;
-    border: 1px solid #616475;
+.fa-xmark {
     color: #E7E7EB;
-    cursor: pointer;
-    padding-left: 20px;
+    width: 24px;
+    height: 24px;
+
+}
+
+.offcanvas-header, .offcanvas-body {
+    background-color: #1E213A;
+    width: 430px;
+}
+
+#header-canvas {
+    padding-bottom: 0;
+}
+
+#body-canvas {
+    padding-top: 0;
+}
+
+
+
+.fa-magnifying-glass {
+    color: #616475;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 73px;
+    bottom: 0;
+    left: 25px;
+    right: 0;
+    z-index: 1;
+}
+
+.box-search {
+    position: relative;
 }
 
 .box-search {
     background-color: #1E213A;
     color: #e7e7eb;
     border: 1px solid #E7E7EB;
+    width: 252px;
     height: 48px;
     margin-right: 10px;
+}
+
+
+input[type="search"] {
+    padding-left: 50px;
 }
 
 .btn-search {
@@ -64,4 +90,34 @@
     font-size: 16px;
     width: 86px;
     height: 48px;
+}
+
+
+.btn-search:hover {
+    background-color: #3c48e9b7;
+}
+
+
+#errormg {
+    color: red;
+    padding: 10px;
+
+}
+
+.cities-box {
+    padding-top: 50px;
+}
+
+.cities-box p {
+    display: flex;
+    align-items: center;
+    width: 351px;
+    height: 64px;
+    color: #E7E7EB;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.cities-box p:hover {
+    border: 1px solid #616475;
 }
