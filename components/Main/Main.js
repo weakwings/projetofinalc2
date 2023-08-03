@@ -58,7 +58,7 @@ function Main({ data, forecast, unit, setUnit }) {
             <p className="txt">Wind status</p>
             <p id="result">
               {Math.round(data.wind.speed)}
-              <span>mph</span>
+              <span>   mph</span>
             </p>
             <div id="compass">
               <div className="circle">
@@ -87,7 +87,7 @@ function Main({ data, forecast, unit, setUnit }) {
             <p className="txt">Visibility</p>
             <p id="result">
               {Math.round(data.visibility / 1609)}
-              <span>miles</span>
+              <span>  miles</span>
             </p>
           </div>
           <div className="status-4">
