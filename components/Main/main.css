@@ -17,6 +17,10 @@
     margin: 10px 5px;
 }
 
+.btn-C:hover {
+    background-color: #6e707ab4;
+}
+
 .btn-F {
     align-items: center;
     width: 40px;
@@ -26,6 +30,10 @@
     color: #e7e7eb;
     border: none;
     margin: 10px 5px;
+}
+
+.btn-F:hover {
+    background-color: #6e707ab4;
 }
 
 /*===== 5 BOX WEEKS =====*/
@@ -121,6 +129,10 @@
     height: 8px;
 }
 
+.humidity-bar:hover {
+    background-color: #ffe100;
+}
+
 #compass {
     display: flex;
     align-items: center;
@@ -140,6 +152,10 @@
     border-radius: 50%;
     padding-top: 5px;
     background-color: #6e707a;
+}
+
+.circle:hover {
+    background-color: #6e707ab4;
 }
 
 .fa-location-arrow {
