@@ -94,7 +94,7 @@ function Main({ data, forecast, unit, setUnit }) {
             <p className="txt">Air Pressure</p>
             <p id="result">
               {data.main.pressure}
-              <span>mb</span>
+              <span>   mb</span>
             </p>
           </div>
         </>
