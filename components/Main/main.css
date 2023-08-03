@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: row-reverse;
     padding-bottom: 70px;
+    font-size: 18px bold;
 }
 
 .btn-C {
@@ -35,6 +36,13 @@
 .btn-F:hover {
     background-color: #6e707ab4;
 }
+
+.btn-C.active,
+.btn-F.active {
+  background-color: #e7e7eb;
+  color: #110E3C;
+}
+
 
 /*===== 5 BOX WEEKS =====*/
 

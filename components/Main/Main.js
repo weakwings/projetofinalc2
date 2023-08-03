@@ -22,11 +22,17 @@ function Main({ data, forecast, unit, setUnit }) {
   return (
     <div className="container-main">
       <div className="btn-CF">
-        <button className="btn-C" onClick={() => setUnit("imperial")}>
+        <button
+          className={`btn-C ${unit === "imperial" ? "active" : ""}`}
+          onClick={() => setUnit("imperial")}
+        >
           {" "}
           ºF
         </button>
-        <button className="btn-F" onClick={() => setUnit("metric")}>
+        <button
+          className={`btn-F ${unit === "metric" ? "active" : ""}`}
+          onClick={() => setUnit("metric")}
+        >
           {" "}
           ºC
         </button>
